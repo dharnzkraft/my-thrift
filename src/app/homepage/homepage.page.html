@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Homepage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/icon/dan3.png" />
+  <ion-card>
+    <ion-item>
+      <ion-label>MM DD YY</ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <br>
+    &nbsp;
+    <ion-item>
+      <ion-input placeholder="Enter amount"></ion-input>
+    </ion-item>
+    
+  </ion-card>
+  <ion-button>Contribute</ion-button>
+</ion-content>
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule" routerLink="/profile" routerDirection="root">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers" routerLink="/history" routerDirection="root">
+      <ion-icon name="time"></ion-icon>
+      <ion-label>History</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about" routerLink="/homepage" routerDirection="root">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="exit" routerLink="/login" routerDirection="root">
+      <ion-icon name="exit"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-tab-button>
+
+
+  </ion-tab-bar>
+
+</ion-tabs>
