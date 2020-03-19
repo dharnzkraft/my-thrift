@@ -1,5 +1,7 @@
 {
   "name": "mythrift",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

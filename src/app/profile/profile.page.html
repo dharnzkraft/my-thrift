@@ -4,17 +4,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-label>Name:</ion-label>
-  </ion-card>
-  <ion-card>
-    <ion-label>Address:</ion-label>
-  </ion-card>
-  <ion-card>
-    <ion-label>Customer's ID:</ion-label>
-  </ion-card>
-  <ion-button>Edit Profile</ion-button>
+<ion-content padding>
+ 
+
+  <div id="images">
+    <div class="image" *ngFor="let post of (userData | async)?.register">
+      <ion-content>
+        <p>{{ register.email}}</p>
+        <p>{{ register.firstname}}</p>
+        <p>{{ register.lastname}}</p>
+        <p>{{ register.phonenumber}}</p>
+        
+      </ion-content>
+    </div>
+  </div>
 </ion-content>
 <ion-tabs>
 

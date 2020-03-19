@@ -6,40 +6,45 @@
 
 <ion-content>
   <img src="../../assets/icon/dan2.png" />
-  <div class="register">
-    <ion-item>
-      <ion-label position="floating">Firstname</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+  <ion-list>
+  
+        <form (ngSubmit)="onSubmit()">
+          <ion-item>
+            <ion-label for="item" position="floating"> First Name</ion-label>
+            <ion-input id="item" required placeholder="Name" type="text" [(ngModel)]="itemValue" name="item"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Lastname</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label for="item1" position="floating">Last Name</ion-label>
+            <ion-input id="item" required placeholder="E-mail" type="text" [(ngModel)]="itemValue1" name="item"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Occupation</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label for="item2" position="floating">E-mail</ion-label>
+            <ion-input id="item" required placeholder="E-mail" type="text" [(ngModel)]="itemValue2" name="item"></ion-input>
+          </ion-item>
+        
+        
+          <ion-item>
+            <ion-label for="item3" position="floating">password</ion-label>
+            <ion-input id="item" required type="password" [(ngModel)]="itemValue3" name="password"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">House Address</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label for="item4" position="floating">Verify password</ion-label>
+            <ion-input id="item" type="password" [(ngModel)]="itemValue4" name="vpassword"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label for="item5" position="floating">Phone Number</ion-label>
+            <ion-input id="item" type="number" [(ngModel)]="itemValue5" name="phoneno"></ion-input> 
+          </ion-item> 
 
-    <ion-item>
-      <ion-label position="floating">Verify Password</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-
-    <ion-button routerLink="/login" routerDirection="root">Register</ion-button>
-  </div>
-
-  <p>Have an existing account?<ion-button routerLink="/login" routerDirection="root">Login here</ion-button></p>
+          <ion-button routerLink="/login" routerDirection="root" fill="solid" expand="block" color="dark" type="submit" (click)="register()" >Sign up</ion-button>
+        </form>
+        
+  
+  </ion-list>
+   <p>Have an existing account?<ion-button routerLink="/login" routerDirection="root">Login here</ion-button></p>
 
 </ion-content>
