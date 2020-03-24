@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { NavController, NavParams } from '@ionic/angular';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -19,14 +20,14 @@ export class RegisterPage implements OnInit {
   itemValue4 = '';
   itemValue5 = '';
   items: Observable<any[]>;
-
+  userId = '';
   constructor(
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
     public navCtrl: NavController,
-    public navParams: NavParams
+    public user: UserService
   ) {
-    this.items = db.list('register').valueChanges();
+    this.items = db.list(`register/${this.userId}`).valueChanges();
    }
 
   ngOnInit() {
@@ -35,7 +36,7 @@ export class RegisterPage implements OnInit {
 
 
   onSubmit() {
-    this.db.list('register').push({firstname: this.itemValue, lastname: this.itemValue1,
+    this.db.list(`register/${this.userId}`).push({firstname: this.itemValue, lastname: this.itemValue1,
        email: this.itemValue2, password: this.itemValue3, phonenumber: this.itemValue5})
        .then(() => this.navCtrl.setRoot('profilePage'));
   }

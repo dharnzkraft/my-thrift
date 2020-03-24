@@ -9,7 +9,7 @@
   
     <form (ngSubmit)="onSubmit()">
 
-      <ion-list lines="full" class="ion-no-margin on-no-paddingi" >
+      <ion-list lines="full" class="ion-no-margin on-no-padding" >
         <ion-item>
           <ion-label for="thrift" position="floating">MM DD YY</ion-label>
           <ion-datetime required id="thrift" [(ngModel)]="mythrift" name="date" displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
@@ -22,12 +22,12 @@
 
         <ion-button  fill="solid" expand="block" color="dark" type="submit" (click)="contribute()">Contribute</ion-button>
         <ion-item *ngFor="let item of items">
-          {{item}}
+          {{item.amount}} : {{item.date}}
         </ion-item>
       </ion-list>
     </form>
     
-  <ion-tabs>
+  <!-- <ion-tabs>
   
     <ion-tab-bar slot="bottom">
       <ion-tab-button routerLink="/profile" routerDirection="root">
@@ -54,5 +54,5 @@
     </ion-tab-bar>
   
   </ion-tabs>
-  
+   -->
 </ion-content>
