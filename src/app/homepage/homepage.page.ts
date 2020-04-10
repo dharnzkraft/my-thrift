@@ -42,7 +42,14 @@ export class HomepagePage implements OnInit {
        if (user) { this.userId = user.uid; }
      });
 
+     this.getDataFromFirebase();
   }
+  InsertData() {
+    const rootRef = this.db.database.ref(`thrift/`);
+    const childRef = rootRef.push({ date: this.mythrift, amount: this.mythrift1 });
+    // this.navCtrl.push(HistoryPage);
+  }
+
   ngOnInit() {
   }
 
@@ -51,10 +58,12 @@ export class HomepagePage implements OnInit {
   }
 
   contribute() {
-    alert('you have successfully contributed');
   }
 
+
+
   getDataFromFirebase() {
+
     this.afd.list(`thrift/`).valueChanges().subscribe(
       data => {
         console.log(data);
@@ -62,8 +71,9 @@ export class HomepagePage implements OnInit {
 
       }
     );
-
   }
+
+
 
 
 }

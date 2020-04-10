@@ -5,7 +5,10 @@
 </ion-header>
 
 <ion-content>
-
+<ion-item *ngFor="let item of items" >
+  {{item.amount}} : {{item.date}}
+</ion-item>
+  
 </ion-content>
 <ion-tabs>
 
