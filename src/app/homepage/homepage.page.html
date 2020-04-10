@@ -21,13 +21,13 @@
         </ion-item>
 
         <ion-button  fill="solid" expand="block" color="dark" type="submit" (click)="contribute()">Contribute</ion-button>
-        <ion-item *ngFor="let item of items">
-          {{item}}
+        <ion-item *ngFor='let item of Items'>
+           {{(item)?.amount}} : {{item.date}}
         </ion-item>
       </ion-list>
     </form>
     
-  <ion-tabs>
+  <!-- <ion-tabs>
   
     <ion-tab-bar slot="bottom">
       <ion-tab-button routerLink="/profile" routerDirection="root">
@@ -53,6 +53,6 @@
   
     </ion-tab-bar>
   
-  </ion-tabs>
+  </ion-tabs> -->
   
 </ion-content>

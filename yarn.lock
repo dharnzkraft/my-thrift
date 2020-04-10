@@ -3012,6 +3012,14 @@ copy-webpack-plugin@5.1.1:
     serialize-javascript "^2.1.2"
     webpack-log "^2.0.0"
 
+cordova-android-support-gradle-release@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/cordova-android-support-gradle-release/-/cordova-android-support-gradle-release-3.0.1.tgz#4f0b7d715280c9bb77785203d410fbe580b210ab"
+  integrity sha512-RSW55DkSckmqhX/kjj+a1YeVdy7s/AtlZn6Qa5XMQmmA4Iogq+IF2jvInZqzCF19DbI5YE95AP7VDbRk+DdDRw==
+  dependencies:
+    q "^1.4.1"
+    semver "5.6.0"
+
 cordova-android@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/cordova-android/-/cordova-android-8.1.0.tgz#d9aea62bbe4a4c8d22fdf21616869439cd1c95a0"
@@ -8160,6 +8168,11 @@ semver-intersect@1.4.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
+
+semver@5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
+  integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
 
 semver@6.3.0, semver@^6.0.0, semver@^6.3.0:
   version "6.3.0"
